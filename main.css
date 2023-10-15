@@ -1,0 +1,380 @@
+@font-face {
+    font-family: VTB;
+    font-weight: normal;
+    src: url(VTBGroupUI-Regular.ttf);
+}
+
+@font-face {
+    font-family: VTB;
+    font-weight: normal;
+    src: url(VTBGroupUI-Medium.ttf);
+}
+@font-face {
+  font-family: VTB;
+  font-weight: bold;
+  src: url(VTBGroupUI-Bold.ttf);
+}
+
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+  font-family: VTB;
+  color: #58a3ff;
+}
+/*Обводка текста (не всего, это метод)*/
+.text-with-stroke {
+  -webkit-text-stroke: 0px rgb(0, 0, 3); /* Ширина и цвет обводки */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.theme-dark {
+  background: linear-gradient(to bottom right, #0013bb, #281a37) no-repeat;
+  color: black
+}
+
+.theme-light {
+  background: linear-gradient;
+  color: dark
+}
+
+.borderElement {
+  background-color: #EEDDFF;
+  border: 6px solid #7922CC;
+  border-radius: 25px;
+}
+
+.accordion{
+  height: 40px;
+  overflow: hidden;
+  border-radius:12px;
+ }
+ 
+body {
+  height: 100vh;	
+  background: linear-gradient(to bottom right, #ffffff, #cfcfff) no-repeat; /* Градиент от #0077ff до #00aaff сверху вниз */
+  font-family: VTB;
+  font-size: px;
+  /* text-shadow: 2px 2px 4px rgba(6, 0, 95, 0.5); если захочешь поиграться с тенями каждого текста!*/ 
+  margin: 0;
+
+color: cornflowerblue;
+margin:0px;
+padding-bottom:px;
+scrollbar-face-color: lightgray;
+scrollbar-highlight-color: red;
+scrollbar-3dlight-color: orange;
+scrollbar-darkshadow-color: brown;
+scrollbar-shadow-color: pink;
+scrollbar-arrow-color: red;
+scrollbar-track-color: ivory;
+}
+*{
+  list-style:none;
+}
+
+.panel {
+  max-height: 0;
+  max-width: 500px; margin: 0 auto;
+  border: 1px solid rgb(255, 255, 255);
+  transition: max-height 0.5s ease-out;
+}
+
+
+.panel__heading {
+  display: block; position: relative; cursor: pointer;
+  padding: 20px 15px; margin: 0;
+  background: cornflowerblue;color: rgb(255, 255, 255);
+}
+
+.panel__heading:after, .panel__heading:before {
+  content: ""; position: absolute;
+  width: 12px; height: 2px;
+  top: 30%; right: 20px;
+  background: white;
+  transition: all 0.5s;
+}
+
+.panel__checkbox:checked~.panel__heading:before {
+  transform: rotate(90deg);
+  opacity: 0;
+  max-height: 0;
+}
+
+.panel__heading:after {
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+
+.panel__checkbox:checked~.panel__heading:after {
+  transform: rotate(160deg);
+}
+
+.panel__checkbox {
+  display: none; position: absolute; left: -9999em;
+}
+
+.panel__checkbox:checked~.panel__content {
+  max-height: 900px;
+  transition: all 2s;
+}
+
+.panel__content {
+  max-height: 0; overflow: hidden; padding: 0 15px;
+  transition: all 0.5s;
+}
+
+.header { 
+  height:px;
+  background:;
+  border:px solid ;
+  height: 60px; /* Высота полоски */
+  background:white; /* Цвет фона полоски */
+  border: 10px solid #006aff; /* Граница (если нужна) */
+  position: fixed; /* Фиксированная позиция, чтобы она всегда была сверху страницы */
+  top: 0; /* Полоска будет прикреплена к верхней части страницы */
+  width: 100%; /* По ширине страницы */
+  z-index: 1000; /* Вы можете настроить z-index в зависимости от вашей макета */
+}
+
+/* Стили текста внутри полоски, если необходимо */
+.header h1 {
+  color: rgb(255, 255, 255); /* Цвет текста */
+  font-size: 18px; /* Размер шрифта */
+  margin: 0; /* Убираем внутренние отступы */
+  padding: 10px; /* Внутренний отступ внутри полоски */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+#mainbody { 
+  margin-top: 50px; /* Высота вашей полоски */
+  margin-left:px;
+  padding-top:px;
+  padding-right:px;
+  padding-bottom:px;
+  padding-left:px;
+  background:50px;
+  border:px solid ;
+}
+
+#menu { position:absolute;
+top:px;
+left:0px;
+width:px;
+background:;
+color:;
+border:px solid ;
+text-align: center;
+}
+
+.menuitem { width:px;
+background:;
+color:;
+font-size:px;
+border:px solid ;
+text-align: center;
+}
+
+.menuhead { left: 0px;
+width:px;
+background:;
+color:;
+border:px solid ;
+text-align: center;
+font-weight:;
+font-size:px;
+}
+
+.footer { width:100%;
+text-align:center;
+margin-top:px;
+padding:px;
+background:;
+color:;
+border:px solid ;
+}
+
+a:hover { font-size:px;
+background-color:;
+color:}
+
+h1 { font-size:px}
+
+h2 { font-size:px}
+
+h3 { font-size:px}
+
+h1, p{
+  margin-top: 55px;
+}
+
+p,h1,h2,h3 { margin: px px px px}
+
+.heading { font-family:;
+font-size:px;
+background-color:;
+color:;
+font-weight:;
+text-align: center}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 25px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+}
+.btn:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+.btn:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+	background-color: #808080;
+}
+.btn:disabled {
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+	cursor: not-allowed;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(205, 222, 255);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.table {
+	width: 30%;
+	border: none;
+	margin-bottom: 20px;
+	border-collapse: separate;
+}
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #EDEDED;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+}
+.table tr th:first-child, .table tr td:first-child {
+	border-left: 1px solid #ddd;
+}
+.table tr th:last-child, .table tr td:last-child {
+	border-right: 1px solid #ddd;
+}
+.table thead tr th:first-child {
+	border-radius: 20px 0 0 0;
+}
+.table thead tr th:last-child {
+	border-radius: 0 20px 0 0;
+}
+.table tbody td {
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+.table tbody tr:nth-child(even) {
+	background: #F8F8F8;
+}
+.table tbody tr:last-child td{
+	border-bottom: 1px solid #ddd;
+}
+.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 20px;
+}
+.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 20px 0;
+}
+
+#n1 img, #n2 img{
+  width: 10%;
+  opacity: 100;
+  transition: 1s;
+}
