@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="jss/app.js" defer></script>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            <header class="hero-section">
+				<img data-speed=".6" class="hero" src="img/phone.png" alt="Alt" >
+				<div class="container">
+                    <h1 class="main-title">Поиск Отделений</h1>
+					<div data-speed=".75" class="main-header">
+					</div>
+				</div>
+			</header>
+        
+            <div class="portfolio">
+                <div class="container">
+                    <main class="gallery">
+
+                        <div data-speed=".9" class="gallery_left">
+        
+                            <img class= "gallery__item" src="img/pinvtb.png" alt="ALT">
+                            <img class= "gallery__item" src="img/map_example.jpeg" alt="ALT">
+        
+                        </div>
+                        <div class="gallery_right">
+        
+                            <div data-speed=".1" class="text-block gallery__item"></div>
+                            <h2 class="text-block__h">Уже определились с отделением ВТБ, которое хотите посетить?</h2>        
+                            <p class="text-block__p">Если нет, то мы вам поможем :)</p>
+                            <button id="steer" style="position: absolute; left: 60%; top: 1300px;" class="accordion">Помоги мне найти отделение</button>
+                            <div class="panel">
+                                <script>
+                                var acc = document.getElementsByClassName("accordion");
+                                var i;
+                                for (i = 0; i < acc.length; i++) {
+                                    acc[i].addEventListener("click", function() {
+                                    this.classList.toggle("active");
+                                    var panel = this.nextElementSibling;
+                                    if (panel.style.display === "block") {
+                                    panel.style.display = "none";
+                                    } else {
+                                    panel.style.display = "block";
+                                    }
+                                    });
+                                }
+                             </script>
+                                <table class="table" border="1">
+                                <p align="center" style="font-family: 'VTB'">
+                                    Чтобы ваш визит был комфортным, давайте учтём ваши пожелания: </p>
+                                <tr>
+                                    <td>Я - физлицо</td>
+                                    <td>  
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>            
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Я - юрлицо</td>
+                                    <td>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>                    
+                                    </td>
+                                </tr>
+                                    <td>Хочу отправить почту</td>
+                                    <td>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Мне сложно перемещаться</td>
+                                    <td>                        
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Хотелось бы снять денег</td>
+                                    <td>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Хотелось бы получить страховку</td>
+                                    <td>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Поближе к метро</td>
+                                    <td>                        
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Круглосуточное отделение банка</td>
+                                    <td>                        
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label> 
+                                    </td>
+                                </tr>
+
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+</body>
+</html>
